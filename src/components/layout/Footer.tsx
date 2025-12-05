@@ -1,44 +1,45 @@
 import Link from 'next/link';
 import { Mountain, MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
+import styles from '../../styles/Footer.module.css';
 
 export default function Footer() {
   return (
-    <footer className="bg-fjellro-slate-900 text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <div className={styles.grid}>
           {/* Brand Section */}
-          <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center space-x-2 mb-4">
-              <Mountain className="h-8 w-8 text-fjellro-pine-400" />
-              <span className="text-2xl font-playfair font-semibold">Fjellro</span>
+          <div className={styles.brandSection}>
+            <Link href="/" className={styles.brandLink}>
+              <Mountain className={styles.brandIcon} />
+              <span className={styles.brandText}>Fjellro</span>
             </Link>
-            <p className="text-fjellro-slate-300 mb-6 max-w-md leading-relaxed">
+            <p className={styles.description}>
               Experience the ultimate Norwegian mountain retreat in Syndin, Vestre Slidre. 
               Where pristine nature meets luxury comfort, creating unforgettable memories 
-              in the heart of Norway's stunning mountain landscape.
+              in the heart of Norway&apos;s stunning mountain landscape.
             </p>
-            <div className="flex space-x-4">
+            <div className={styles.socialLinks}>
               <a
                 href="https://instagram.com/fjellro"
-                className="text-fjellro-slate-400 hover:text-fjellro-pine-400 transition-colors"
+                className={styles.socialLink}
                 aria-label="Follow us on Instagram"
               >
-                <Instagram className="h-5 w-5" />
+                <Instagram className={styles.socialIcon} />
               </a>
               <a
                 href="https://facebook.com/fjellro"
-                className="text-fjellro-slate-400 hover:text-fjellro-pine-400 transition-colors"
+                className={styles.socialLink}
                 aria-label="Follow us on Facebook"
               >
-                <Facebook className="h-5 w-5" />
+                <Facebook className={styles.socialIcon} />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-fjellro-pine-400">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 className={styles.sectionTitle}>Quick Links</h3>
+            <ul className={styles.linksList}>
               {[
                 { href: '/', label: 'Home' },
                 { href: '/about', label: 'About Fjellro' },
@@ -48,10 +49,7 @@ export default function Footer() {
                 { href: '/contact', label: 'Contact Us' },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-fjellro-slate-300 hover:text-fjellro-pine-400 transition-colors"
-                  >
+                  <Link href={link.href} className={styles.navLink}>
                     {link.label}
                   </Link>
                 </li>
@@ -61,31 +59,31 @@ export default function Footer() {
 
           {/* Contact Information */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-fjellro-pine-400">Contact & Location</h3>
-            <div className="space-y-3">
-              <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-fjellro-pine-400 mt-0.5 flex-shrink-0" />
+            <h3 className={styles.sectionTitle}>Contact & Location</h3>
+            <div className={styles.contactInfo}>
+              <div className={styles.contactItem}>
+                <MapPin className={styles.contactIcon} />
                 <div>
-                  <p className="text-fjellro-slate-300">Syndin, Vestre Slidre</p>
-                  <p className="text-fjellro-slate-300">2940 Fagernes, Norway</p>
+                  <p className={styles.contactText}>Syndin, Vestre Slidre</p>
+                  <p className={styles.contactText}>2940 Fagernes, Norway</p>
                 </div>
               </div>
               
-              <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-fjellro-pine-400 flex-shrink-0" />
+              <div className={styles.contactItem}>
+                <Phone className={styles.contactIcon} />
                 <a
                   href="tel:+4712345678"
-                  className="text-fjellro-slate-300 hover:text-fjellro-pine-400 transition-colors"
+                  className={styles.contactLink}
                 >
                   +47 123 45 678
                 </a>
               </div>
               
-              <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-fjellro-pine-400 flex-shrink-0" />
+              <div className={styles.contactItem}>
+                <Mail className={styles.contactIcon} />
                 <a
                   href="mailto:hello@fjellro.no"
-                  className="text-fjellro-slate-300 hover:text-fjellro-pine-400 transition-colors"
+                  className={styles.contactLink}
                 >
                   hello@fjellro.no
                 </a>
@@ -93,9 +91,9 @@ export default function Footer() {
             </div>
 
             {/* Local Area Info */}
-            <div className="mt-6">
-              <h4 className="text-sm font-semibold mb-2 text-fjellro-wood-300">Nearby Attractions</h4>
-              <ul className="text-sm text-fjellro-slate-400 space-y-1">
+            <div className={styles.attractionsSection}>
+              <h4 className={styles.attractionsTitle}>Nearby Attractions</h4>
+              <ul className={styles.attractionsList}>
                 <li>• Fagernes Center - 15 min drive</li>
                 <li>• Beitostølen Ski Resort - 30 min</li>
                 <li>• Jotunheimen National Park - 45 min</li>
@@ -105,15 +103,15 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-fjellro-slate-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-fjellro-slate-400 text-sm mb-4 md:mb-0">
+        <div className={styles.bottomBar}>
+          <p className={styles.copyright}>
             © 2024 Fjellro. All rights reserved. • Luxury cabin rental in Norway
           </p>
-          <div className="flex space-x-6 text-sm">
-            <Link href="/privacy" className="text-fjellro-slate-400 hover:text-fjellro-pine-400 transition-colors">
+          <div className={styles.legalLinks}>
+            <Link href="/privacy" className={styles.legalLink}>
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-fjellro-slate-400 hover:text-fjellro-pine-400 transition-colors">
+            <Link href="/terms" className={styles.legalLink}>
               Terms of Service
             </Link>
           </div>

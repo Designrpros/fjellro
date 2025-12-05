@@ -1,63 +1,44 @@
-# Fjellro Implementation Plan - UPDATED
+# Implementation Plan: Fix Syntax Errors and Convert to Vanilla CSS
 
-## Project Overview
-Building "Fjellro" - a high-end, cozy cabin rental website with Norwegian mountain cabin vibes.
+## Problem Analysis
+The project has multiple JSXEscape syntax errors across several files:
+- Footer.tsx: 6 problems including apostrophe escaping issues
+- HeroSection.tsx: 16 syntax errors 
+- page.tsx: 1 syntax error
 
-**Location**: Syndin, Vestre Slidre, Norway (near Fagernes)
-**Vibe**: Scandi-minimalism, hygge, nature-focused, warm, exclusive but grounded
+## Root Cause
+The errors appear to be related to:
+1. Improper JSX escaping of special characters (apostrophes, quotes)
+2. Potentially malformed JSX syntax
+3. Possible issues with custom CSS classes (fjellro-* classes)
 
-## Current State Analysis
-✅ Project is actually clean - fresh Next.js 16 setup
-✅ No actual syntax errors in current codebase
-✅ Ready to build Fjellro features immediately
+## Solution Approach
+1. **Fix JSX Syntax Errors**: 
+   - Properly escape apostrophes and quotes in JSX text content
+   - Fix any malformed JSX elements
+   - Ensure proper string interpolation
 
-## Tech Stack Compliance
-- ✅ Next.js 16 (App Router)
-- ✅ TypeScript (Strict mode)
-- ✅ CSS Modules (.module.css)
-- ✅ React Server Components (RSC) by default
-- 🔄 Need to add: lucide-react for icons
-- 🔄 Need to add: next/font setup (Inter + Playfair Display)
-- 🔄 Need to add: next/image optimization
+2. **Convert to Vanilla CSS**:
+   - Remove Tailwind/custom CSS classes
+   - Create vanilla CSS stylesheets
+   - Implement responsive design with media queries
+   - Maintain the dark theme and modern aesthetic
 
-## Design Guidelines
-**Color Palette**: Earth tones (slate gray, pine green, warm wood browns, soft whites)
-**Typography**: Inter for body, Playfair Display for headers
-**Imagery**: Large, immersive mountain and cabin photography
-**Responsive**: Mobile-first design
-
-## Immediate Implementation Strategy
-
-### Phase 1: Foundation Setup (30 min)
-1. Install lucide-react icons
-2. Set up Fjellro color palette in CSS variables
-3. Configure fonts (Inter + Playfair Display)
-4. Update layout.tsx with Fjellro branding
-5. Create components directory structure
-
-### Phase 2: Core Layout & Navigation (45 min)
-1. Build responsive Navbar component with transparent-to-solid behavior
-2. Create Footer with Syndin/Fagernes location info
-3. Implement mobile navigation menu
-4. Add scroll-based header transitions
-
-### Phase 3: Hero Section & Homepage (60 min)
-1. Create stunning mountain hero section
-2. Build cabin introduction content
-3. Add "Book Now" CTA
-4. Implement activity highlights (skiing, hiking, fishing)
-5. Add location-specific content
-
-### Phase 4: Polish & Optimization (30 min)
-1. Optimize images with next/image
-2. Add loading states and animations
-3. Ensure accessibility compliance
-4. Test responsive design
+3. **Maintain Design Quality**:
+   - Keep glassmorphism effects
+   - Preserve hover states and transitions
+   - Ensure proper spacing and typography
+   - Maintain responsive layout
 
 ## Verification Steps
-1. ✅ TypeScript compilation successful
-2. ✅ Next.js build successful
-3. 🔄 Responsive design tested
-4. 🔄 Performance optimized
-5. 🔄 Accessibility compliance
-6. 🔄 Norwegian mountain cabin vibe achieved
+1. Check that all syntax errors are resolved
+2. Verify that vanilla CSS renders correctly
+3. Test responsive behavior
+4. Ensure dark theme is maintained
+5. Validate that all interactive elements work
+
+## Files to Modify
+- src/components/layout/Footer.tsx
+- src/components/sections/HeroSection.tsx  
+- src/app/page.tsx
+- Create new CSS files for styling
