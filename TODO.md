@@ -1,67 +1,76 @@
-# Fjellro Implementation TODO
+# Fjellro Development TODO
 
-## Phase 2: Execute
+## PHASE 1: Fix Syntax Errors & Setup ⏳
 
-### 1. Setup and Foundation
-- [ ] Update main App.jsx with basic structure
-- [ ] Create reusable component files
-- [ ] Set up proper CSS custom properties for theme
+### Critical Fixes (Must do first)
+- [ ] Fix CSS syntax errors in `src/app/globals.css`
+- [ ] Fix CSS syntax errors in `src/app/page.module.css`  
+- [ ] Fix JSX syntax errors in `src/components/HeroSection.tsx`
+- [ ] Fix JSX syntax errors in `src/components/Navbar.tsx`
+- [ ] Verify TypeScript configuration
+- [ ] Test compilation with `npm run build`
 
-### 2. Navigation Component
-- [ ] Create Navigation.jsx component
-- [ ] Implement glassmorphism header
-- [ ] Add responsive mobile menu
-- [ ] Style navigation links with hover effects
+### Foundation Setup
+- [ ] Set up CSS variables for Fjellro color palette
+- [ ] Import and configure fonts (Inter + Playfair Display)
+- [ ] Create base responsive breakpoints
+- [ ] Set up lucide-react icons
+- [ ] Ensure next/image is properly configured
 
-### 3. Hero Section
-- [ ] Create Hero.jsx component
-- [ ] Implement full-screen mountain background
-- [ ] Add hero text with gradient effects
-- [ ] Create prominent CTA button
-- [ ] Add subtle scroll indicator
+## PHASE 2: Core Layout & Navigation
 
-### 4. Adventure Gallery Section
-- [ ] Create AdventureGallery.jsx component
-- [ ] Design adventure cards with glassmorphism
-- [ ] Implement hover animations
-- [ ] Add image overlays and text
+### Layout Structure
+- [ ] Update `src/app/layout.tsx` with proper metadata
+- [ ] Create transparent-to-solid header behavior
+- [ ] Implement responsive navigation
+- [ ] Build footer with Syndin/Fagernes location info
+- [ ] Add proper TypeScript types
 
-### 5. Gear Showcase Section
-- [ ] Create GearShowcase.jsx component
-- [ ] Design product cards
-- [ ] Add interactive hover states
-- [ ] Implement grid layout
+### Navigation Component
+- [ ] Create mobile-friendly navigation menu
+- [ ] Implement smooth scroll transitions
+- [ ] Add proper accessibility attributes
+- [ ] Style with Scandi-minimalist design
 
-### 6. Experience Stories Section
-- [ ] Create ExperienceStories.jsx component
-- [ ] Design testimonial cards
-- [ ] Add customer photos/avatars
-- [ ] Implement carousel or grid layout
+## PHASE 3: Hero Section & Homepage
 
-### 7. Footer Component
-- [ ] Create Footer.jsx component
-- [ ] Add contact information
-- [ ] Include social media links
-- [ ] Style with dark theme
+### Hero Section
+- [ ] Create stunning mountain background hero
+- [ ] Add compelling headline about Fjellro cabin
+- [ ] Implement "Book Now" CTA button
+- [ ] Ensure responsive image handling
+- [ ] Add subtle animations/transitions
 
-### 8. Polish and Optimization
-- [ ] Add smooth scroll animations
-- [ ] Optimize images and performance
-- [ ] Test responsive design
+### Homepage Content
+- [ ] Cabin introduction section
+- [ ] Activity highlights (skiing, hiking, fishing)
+- [ ] Location benefits (Fagernes proximity)
+- [ ] Image gallery preview
+
+## PHASE 4: Polish & Optimization
+
+### Performance
+- [ ] Optimize all images with next/image
+- [ ] Implement proper font loading
 - [ ] Add loading states
-- [ ] Final styling polish
+- [ ] Test Core Web Vitals
 
-### 9. Testing and Verification
-- [ ] Run build command
-- [ ] Test all interactions
-- [ ] Verify responsive design
-- [ ] Check accessibility
+### Content & SEO
+- [ ] Add Norwegian/English content strategy
+- [ ] Implement proper meta tags
+- [ ] Add structured data for rentals
+- [ ] Location-specific SEO content
+
+### Final Testing
+- [ ] Cross-browser testing
+- [ ] Mobile responsiveness
+- [ ] Accessibility compliance
 - [ ] Performance audit
 
-## Completion Criteria
-- [ ] All sections implemented and styled
-- [ ] Responsive design working on all screen sizes
-- [ ] Smooth animations and interactions
-- [ ] Premium visual design achieved
-- [ ] No console errors
-- [ ] Build process successful
+---
+
+## Status Legend
+- ⏳ In Progress
+- ✅ Complete
+- ❌ Blocked
+- 🔄 Needs Review

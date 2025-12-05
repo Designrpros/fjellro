@@ -1,45 +1,63 @@
-# Fjellro - Premium Mountain Adventure Website Implementation Plan
+# Fjellro Implementation Plan - UPDATED
 
 ## Project Overview
-Building a modern, premium mountain adventure website with dark mode design, glassmorphism effects, and interactive elements. The site will showcase mountain adventures, gear, and experiences.
+Building "Fjellro" - a high-end, cozy cabin rental website with Norwegian mountain cabin vibes.
+
+**Location**: Syndin, Vestre Slidre, Norway (near Fagernes)
+**Vibe**: Scandi-minimalism, hygge, nature-focused, warm, exclusive but grounded
 
 ## Current State Analysis
-- React + Vite setup with Tailwind CSS
-- Basic project structure in place
-- Hero mountain image available in public folder
-- Clean slate for implementation
+✅ Project is actually clean - fresh Next.js 16 setup
+✅ No actual syntax errors in current codebase
+✅ Ready to build Fjellro features immediately
 
-## Design Philosophy
-- **Dark Mode First**: Deep slate/gray backgrounds with vibrant accent colors
-- **Glassmorphism**: Frosted glass effects with backdrop blur
-- **Premium Feel**: Subtle gradients, refined typography, proper spacing
-- **Interactive**: Smooth transitions, hover states, micro-interactions
-- **Mountain Theme**: Nature-inspired colors and imagery
+## Tech Stack Compliance
+- ✅ Next.js 16 (App Router)
+- ✅ TypeScript (Strict mode)
+- ✅ CSS Modules (.module.css)
+- ✅ React Server Components (RSC) by default
+- 🔄 Need to add: lucide-react for icons
+- 🔄 Need to add: next/font setup (Inter + Playfair Display)
+- 🔄 Need to add: next/image optimization
 
-## Key Sections to Implement
-1. **Hero Section**: Full-screen mountain background with call-to-action
-2. **Navigation**: Sticky header with glassmorphism effect
-3. **Adventure Gallery**: Grid of mountain adventures with hover effects
-4. **Gear Showcase**: Premium outdoor equipment section
-5. **Experience Stories**: Customer testimonials/stories
-6. **Footer**: Contact info and social links
+## Design Guidelines
+**Color Palette**: Earth tones (slate gray, pine green, warm wood browns, soft whites)
+**Typography**: Inter for body, Playfair Display for headers
+**Imagery**: Large, immersive mountain and cabin photography
+**Responsive**: Mobile-first design
 
-## Technical Approach
-- Component-based architecture
-- Tailwind CSS for styling
-- Responsive design (mobile-first)
-- Performance optimized images
-- Smooth scroll animations
+## Immediate Implementation Strategy
 
-## Color Palette
-- Primary: Slate-900, Slate-800 (backgrounds)
-- Accent: Emerald-400, Blue-400 (highlights)
-- Text: Slate-100, Slate-300 (primary/secondary text)
-- Glass: White with low opacity for glassmorphism
+### Phase 1: Foundation Setup (30 min)
+1. Install lucide-react icons
+2. Set up Fjellro color palette in CSS variables
+3. Configure fonts (Inter + Playfair Display)
+4. Update layout.tsx with Fjellro branding
+5. Create components directory structure
+
+### Phase 2: Core Layout & Navigation (45 min)
+1. Build responsive Navbar component with transparent-to-solid behavior
+2. Create Footer with Syndin/Fagernes location info
+3. Implement mobile navigation menu
+4. Add scroll-based header transitions
+
+### Phase 3: Hero Section & Homepage (60 min)
+1. Create stunning mountain hero section
+2. Build cabin introduction content
+3. Add "Book Now" CTA
+4. Implement activity highlights (skiing, hiking, fishing)
+5. Add location-specific content
+
+### Phase 4: Polish & Optimization (30 min)
+1. Optimize images with next/image
+2. Add loading states and animations
+3. Ensure accessibility compliance
+4. Test responsive design
 
 ## Verification Steps
-1. Responsive design testing
-2. Performance audit
-3. Accessibility check
-4. Cross-browser compatibility
-5. Image optimization verification
+1. ✅ TypeScript compilation successful
+2. ✅ Next.js build successful
+3. 🔄 Responsive design tested
+4. 🔄 Performance optimized
+5. 🔄 Accessibility compliance
+6. 🔄 Norwegian mountain cabin vibe achieved
