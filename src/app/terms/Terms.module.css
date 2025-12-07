@@ -1,0 +1,72 @@
+.main {
+  min-height: 100vh;
+  background-color: var(--fjellro-slate-900);
+  color: white;
+  padding: 5rem 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.content {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 3rem;
+}
+
+.title {
+  font-family: var(--font-playfair);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--fjellro-pine-400);
+}
+
+.lastUpdated {
+  color: var(--fjellro-slate-400);
+  font-size: 0.875rem;
+  margin-bottom: 3rem;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--fjellro-pine-400);
+}
+
+.paragraph {
+  color: var(--fjellro-slate-300);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.list {
+  color: var(--fjellro-slate-300);
+  line-height: 1.7;
+  padding-left: 1.5rem;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+}
+
+.link {
+  color: var(--fjellro-pine-400);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: var(--fjellro-pine-300);
+  text-decoration: underline;
+}

@@ -1,0 +1,273 @@
+.main {
+  min-height: 100vh;
+  background-color: var(--fjellro-slate-900);
+  color: white;
+}
+
+.hero {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    var(--fjellro-slate-900) 0%,
+    var(--fjellro-slate-800) 100%
+  );
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/images/activities-hero.jpg') center/cover no-repeat;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.heroTitle {
+  font-family: var(--font-playfair);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 4rem;
+  }
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: var(--fjellro-slate-300);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.activities {
+  padding: 5rem 0;
+  background-color: var(--fjellro-slate-900);
+}
+
+.sectionTitle {
+  font-family: var(--font-playfair);
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--fjellro-pine-400);
+}
+
+.activitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.activityCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.activityCard:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--fjellro-pine-400);
+}
+
+.activityIcon {
+  width: 4rem;
+  height: 4rem;
+  background: var(--fjellro-pine-500);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+}
+
+.activityTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.activityDescription {
+  color: var(--fjellro-slate-300);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.activityMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.season {
+  padding: 0.5rem 1rem;
+  background: rgba(52, 211, 153, 0.2);
+  border: 1px solid var(--fjellro-pine-400);
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  color: var(--fjellro-pine-400);
+}
+
+.duration {
+  padding: 0.5rem 1rem;
+  background: rgba(212, 165, 116, 0.2);
+  border: 1px solid var(--fjellro-wood-300);
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  color: var(--fjellro-wood-300);
+}
+
+.seasonal {
+  padding: 5rem 0;
+  background-color: var(--fjellro-slate-800);
+}
+
+.seasonGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .seasonGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.seasonCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.seasonCard:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.seasonTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--fjellro-pine-400);
+  text-align: center;
+}
+
+.seasonImage {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(
+    135deg,
+    var(--fjellro-slate-700) 0%,
+    var(--fjellro-slate-600) 100%
+  );
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fjellro-slate-400);
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--fjellro-slate-600);
+}
+
+.seasonActivities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.seasonActivities li {
+  padding: 0.5rem 0;
+  color: var(--fjellro-slate-300);
+  border-bottom: 1px solid var(--fjellro-slate-700);
+}
+
+.seasonActivities li:before {
+  content: '•';
+  color: var(--fjellro-pine-400);
+  margin-right: 0.5rem;
+}
+
+.services {
+  padding: 5rem 0;
+  background-color: var(--fjellro-slate-900);
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.serviceCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--fjellro-pine-400);
+}
+
+.serviceTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--fjellro-pine-400);
+}
+
+.serviceDescription {
+  color: var(--fjellro-slate-300);
+  line-height: 1.6;
+}
